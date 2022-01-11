@@ -22,6 +22,7 @@
          version="4.0"
          metadata-complete="true">
 
+
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.lanclaw.servlet.user.LoginServlet</servlet-class>
@@ -38,6 +39,33 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/logout.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.lanclaw.servlet.user.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/jsp/user.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProviderServlet</servlet-name>
+        <servlet-class>com.lanclaw.servlet.provider.ProviderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProviderServlet</servlet-name>
+        <url-pattern>/jsp/provider.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BillServlet</servlet-name>
+        <servlet-class>com.lanclaw.servlet.bill.BillServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BillServlet</servlet-name>
+        <url-pattern>/jsp/bill.do</url-pattern>
     </servlet-mapping>
 
     <!--    字符编码过滤器-->
@@ -59,6 +87,11 @@
         <filter-name>SysFilter</filter-name>
         <url-pattern>/jsp/*</url-pattern>
     </filter-mapping>
+
+    <!--  默认Session过期时间-->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>

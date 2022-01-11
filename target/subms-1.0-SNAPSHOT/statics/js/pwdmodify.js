@@ -1,4 +1,6 @@
-﻿var oldpassword = null;
+﻿
+
+var oldpassword = null;
 var newpassword = null;
 var rnewpassword = null;
 var saveBtn = null;
