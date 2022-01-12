@@ -4,6 +4,7 @@ import com.lanclaw.dao.BaseDao;
 import com.lanclaw.dao.user.UserDao;
 import com.lanclaw.dao.user.UserDaoImpl;
 import com.lanclaw.pojo.User;
+import org.junit.Test;
 
 
 import java.sql.*;
@@ -198,21 +199,22 @@ public class UserServiceImpl implements UserService {
         }
         return user;
     }
-    /*@Test
-	public void test() {
-		UserServiceImpl userService = new UserServiceImpl();
-		String userCode = "admin";
-		String userPassword = "12345678";
-		User admin = userService.login(userCode, userPassword);
-		System.out.println(admin.getUserPassword());
 
-	}*/
+//    @Test
+//	public void test() {
+//		UserServiceImpl userService = new UserServiceImpl();
+//		String userCode = "admin";
+//		String userPassword = "12345678";
+//		User admin = userService.login(userCode, userPassword);
+//		System.out.println(admin.getUserPassword());
+//
+//	}
     
-    /*@Test
+    @Test
     public void test(){
      UserService userService = new UserServiceImpl();
      int userCount = userService.getUserCount(null,1);
      System.out.println(userCount);
-    }*/
+    }
 
 }
